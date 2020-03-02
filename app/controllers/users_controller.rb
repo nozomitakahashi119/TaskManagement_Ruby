@@ -1,11 +1,8 @@
 class UsersController < ApplicationController
   def index
-    @users = User.order(id: :desc).page(params[:page]).per(25)
-  end 
-  #ユーザの降順一覧表示の取得＆ページネーション最大25件
+  end
 
   def show
-    @user = User.find(params[:id])
   end
 
   def new
