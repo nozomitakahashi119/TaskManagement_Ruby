@@ -2,13 +2,15 @@ Rails.application.routes.draw do
   get 'sessions/new'
   get 'sessions/create'
   get 'sessions/destroy'
+  
   get 'toppages/index'
+  
   get 'users/index'
   get 'users/show'
   get 'users/new'
   get 'users/create'
   
-  root to: 'sessions#new' #メインページの設定
+  root to: 'tasks#index' #メインページの設定
   
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'

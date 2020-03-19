@@ -4,4 +4,6 @@ class User < ApplicationRecord
                     format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i },
                     uniqueness: { case_sensitive: false } #メアドは正しい配列かどうか
   has_secure_password #パスワード設定用のやつ
+  
+  has_many :tasks
 end
